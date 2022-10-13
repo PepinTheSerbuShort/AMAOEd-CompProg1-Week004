@@ -30,7 +30,6 @@ void calculateAge(
     } else {
         cout << "You are NOT legally to vote for an election. Next time when you are 18 or older.";
     }
-
 }
 
 int main()
