@@ -54,5 +54,6 @@ int main()
 
     calculateAge(birth_date, birth_month, birth_year, 
         current_date, current_month, current_year);
+    
     return 0;
 }
