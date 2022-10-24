@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int first_integer, second_integer, third_integer, chosen_case, smallest_integer, largest_integer;
+	cout << "Choose one: (1) Odd or Even, (2) Large or Small, (3) Largest and Smallest.\n";
+	cin >> chosen_case;
+
+	switch (chosen_case)
+	{
+
+		case 1:
+
+		cout << "\n\nInput one integer for odd or even.\nInteger: ";
+		cin >> first_integer;
+
+		if(first_integer & 2 == 0)
+		{
+			cout << "\n" << first_integer << " is even.";
+		}
+		else
+		{
+			cout << "\n" << first_integer << " is odd.";
+		}
+
+		break;
+		case 2:
+
+		cout << "\n\nInput two integers for more or less.\n1st: ";
+		cin >> first_integer;
+		cout << "\n2nd: ";
+		cin >> second_integer;
+
+		if(first_integer > second_integer)
+		{
+			cout << "\nA first integer is larger than a second integer";
+		}
+		else if(first_integer < second_integer)
+		{
+			cout << "\nA first integer is smaller than a second integer";
+		}
+		else
+		{
+			cout << "\nBoth integers are equal.";
+		}
+
+		break;
+		case 3:
+
+		cout << "\n\nInput three integers for highest and lowest.\n1st: ";
+		cin >> first_integer;
+		cout << "\n2nd: ";
+		cin >> second_integer;
+		cout << "\n3rd: ";
+		cin >> third_integer;
+
+		smallest_integer = first_integer;
+		largest_integer = second_integer;
+
+		if (second_integer < smallest_integer)
+		{
+			smallest_integer = second_integer;
+		}
+		if (third_integer < smallest_integer)
+		{
+			smallest_integer = third_integer;
+		}
+		if (second_integer > largest_integer)
+		{
+			largest_integer = second_integer;
+		}
+		if (third_integer > largest_integer)
+		{
+			largest_integer = third_integer;
+		}
+
+		cout << "\nThe smallest integer among integers is " << smallest_integer << ".";
+		cout << "\nThe largest integer among integers is " << largest_integer << ".";
+
+		break;
+		default:
+
+		cout << "\n\nThere are no any other cases.";
+	}
+
+	return 0;
+}
