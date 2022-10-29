@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float calculus_grade, math_grade, communication_grade,
+	euthenics_grade, understanding_grade, fundamentals_grade,
+	programming_grade, total_grade, grade_result;
+
+	cout << "Insert your grade (with decimal as optional) in each subject if you are a Computer Science student.";
+	cout << "\n\nCalculus:\t\t\t\t\t";
+	cin >> calculus_grade;
+	cout << "\nMathematics of the World:\t";
+	cin >> math_grade;
+	cout << "\nPurposive Communication:\t";
+	cin >> communication_grade;
+	cout << "\nEuthentics:\t\t\t\t\t";
+	cin >> euthenics_grade;
+	cout << "\nUnderstanding The Self:\t\t";
+	cin >> understanding_grade;
+	cout << "\nComputing Fundamentals:\t\t";
+	cin >> fundamentals_grade;
+	cout << "\nComputer Programming:\t\t";
+	cin >> programming_grade;
+
+	total_grade = calculus_grade + math_grade + communication_grade
+	+ euthenics_grade + understanding_grade + fundamentals_grade +
+	programming_grade;
+
+	grade_result = total_grade / 7;
+
+	if (grade_result >= 75.00)
+	{
+		cout << "You have passed your grade with " << grade_result << "%.";
+	} else {
+		cout << "You have failed your grade with " << grade_result << "%.";
+	}
+	return 0;
+}
